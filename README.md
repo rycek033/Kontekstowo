@@ -4,26 +4,23 @@ Aplikacja webowa wspierajaca trening jezykowy i poznawczy osob z zaburzeniami mo
 
 Uzytkownik slucha dzwieku, wskazuje odpowiedni obiekt na scenie, a poprawnie rozpoznane elementy trafiaja do przybornika. Dla zebranych obiektow mozna odtworzyc wymowe.
 
-## Co zawiera projekt
+## Projekt zawiera
 
 - Frontend (React + Vite + TypeScript + Tailwind CSS)
-- Backend API (FastAPI + SQLAlchemy)
-- Baze SQLite z automatyczna inicjalizacja przy starcie backendu
-- Zasoby statyczne: grafiki i dzwieki sceny
+- Backend API (FastAPI)
+- Baze SQLite 
+- Zasoby statyczne 
 
-## Najwazniejsze funkcje
+## Funkcje
 
 - Interaktywna scena z klikalnymi obiektami
-- Trening skojarzen dzwiek-obraz
-- Informacja zwrotna po poprawnej i blednej odpowiedzi
-- Przybornik z juz rozpoznanymi obiektami
-- Odtwarzanie nagrania glosowego nazwy obiektu
-- Przelaczanie motywu jasny/ciemny z zapamietywaniem preferencji
+- Trening skojarzeń dzwiek-obraz
+- Odtwarzanie nagrania głosowego (lektor)
 
 ## Stos technologiczny
 
-- Frontend: React 19, TypeScript, Vite, Tailwind CSS
-- Backend: FastAPI, SQLAlchemy, Uvicorn
+- Frontend: React, TypeScript, Vite, Tailwind CSS
+- Backend: FastAPI
 - Baza danych: SQLite
 
 ## Wymagania
@@ -45,8 +42,6 @@ pip install -r requirements.txt
 uvicorn main:app --reload --port 8000
 ```
 
-Backend bedzie dostepny pod adresem: `http://localhost:8000`
-
 ### 2. Frontend
 
 W nowym terminalu:
@@ -57,24 +52,11 @@ npm install
 npm run dev
 ```
 
-Frontend bedzie dostepny pod adresem: `http://localhost:5173`
-
-## Uruchamianie jednym poleceniem
-
-W katalogu glownym projektu:
-
-```bash
-chmod +x start.sh
-./start.sh
-```
-
-Skrypt uruchamia backend i frontend. Zatrzymanie frontendu konczy tez proces backendu.
-
 ## API
 
 ### GET `/api/rooms/{room_name}`
 
-Zwraca scene wraz z lista obiektow.
+Zwraca scenę wraz z listą obiektów.
 
 Przyklad:
 
@@ -100,13 +82,3 @@ Kontekstowo/
 |- start.sh
 `- README.md
 ```
-
-## Uwagi
-
-- Przy pierwszym starcie backend tworzy tabele i dodaje przykladowa scene `Bedroom`, jesli nie istnieje.
-- Frontend laczy sie z backendem przez `http://localhost:8000`.
-- CORS jest skonfigurowany dla `http://localhost:5173`.
-
-## Licencja
-
-Brak zdefiniowanej licencji. Jesli projekt ma byc publikowany, dodaj plik `LICENSE`.
