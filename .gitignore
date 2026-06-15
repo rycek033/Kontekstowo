@@ -3,7 +3,7 @@
 .env.*
 
 # Git backup repository
-backup-repo.git/
+start.sh*
 
 # Python
 __pycache__/
