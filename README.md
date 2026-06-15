@@ -1,36 +1,36 @@
 # Kontekstowo
 
-Aplikacja webowa wspierajaca trening jezykowy i poznawczy osob z zaburzeniami mowy (np. afazja) w realistycznym kontekscie scen codziennych.
+A web application supporting language and cognitive training for individuals with speech disorders (e.g., aphasia) within the realistic context of everyday scenes.
 
-Uzytkownik slucha dzwieku, wskazuje odpowiedni obiekt na scenie, a poprawnie rozpoznane elementy trafiaja do przybornika. Dla zebranych obiektow mozna odtworzyc wymowe.
+The user listens to a sound and points to the corresponding object in the scene. Correctly identified items are added to the inventory. Pronunciation audio can be played for the collected objects.
 
-## Projekt zawiera
+## Project Includes
 
 - Frontend (React + Vite + TypeScript + Tailwind CSS)
 - Backend API (FastAPI)
-- Baze SQLite 
-- Zasoby statyczne 
+- SQLite Database
+- Static assets
 
-## Funkcje
+## Features
 
-- Interaktywna scena z klikalnymi obiektami
-- Trening skojarzeń dzwiek-obraz
-- Odtwarzanie nagrania głosowego (lektor)
+- Interactive scene with clickable objects
+- Sound-to-image association training
+- Voiceover playback (voice actor)
 
-## Stos technologiczny
+## Tech Stack
 
 - Frontend: React, TypeScript, Vite, Tailwind CSS
 - Backend: FastAPI
-- Baza danych: SQLite
+- Database: SQLite
 
-## Wymagania
+## Requirements
 
 - Node.js 20+
 - npm 10+
 - Python 3.11+
-- bash (dla skryptu startowego)
+- bash (for the startup script)
 
-## Szybki start
+## Quick Start
 
 ### 1. Backend
 
@@ -44,7 +44,7 @@ uvicorn main:app --reload --port 8000
 
 ### 2. Frontend
 
-W nowym terminalu:
+In a new terminal:
 
 ```bash
 cd frontend
@@ -56,15 +56,15 @@ npm run dev
 
 ### GET `/api/rooms/{room_name}`
 
-Zwraca scenę wraz z listą obiektów.
+Returns the scene along with a list of objects.
 
-Przyklad:
+Example:
 
 ```bash
 curl http://localhost:8000/api/rooms/Bedroom
 ```
 
-## Struktura projektu
+## Project Structure
 
 ```text
 Kontekstowo/
